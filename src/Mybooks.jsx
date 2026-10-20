@@ -36,14 +36,14 @@ export default function Mybooks() {
   const [author, setAuthor] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
-
+const booksUrl = import.meta.env.VITE_BOOKS_API_URL;
   useEffect(() => {
     if (!email) {
       setIsLoading(false);
       setAuthor(null);
       return undefined;
     }
-    const booksUrl = import.meta.env.VITE_BOOKS_API_URL;
+   // const booksUrl = import.meta.env.VITE_BOOKS_API_URL;
 
     const controller = new AbortController();
 
@@ -105,7 +105,7 @@ export default function Mybooks() {
 
   function signOut() {
     setEmail("");
-    navigate("/login", { replace: true });
+    navigate('${import.meta.env.VITE_API_URL}/login', { replace: true });
   }
 
   const books = author?.books ?? [];
