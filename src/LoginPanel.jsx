@@ -11,6 +11,7 @@ export default function LoginPanel() {
   const { setEmail } = useEmail();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const[authorss, setAuthors] = useState([]);
   const baseUrl = import.meta.env.VITE_API_URL;
 const booksUrl = import.meta.env.BOOKS_API_URL
 
@@ -36,6 +37,7 @@ const booksUrl = import.meta.env.BOOKS_API_URL
       let authors;
       try {
         authors = await response.json();
+        setAuthors(authors);
       } catch {
         throw new Error("The author API returned an invalid response.");
       }
@@ -45,7 +47,7 @@ const booksUrl = import.meta.env.BOOKS_API_URL
       }
       console.log("authors:");
 
-      const author = authors.find(
+      const author = authorss.find(
         (candidate) =>
           candidate &&
           typeof candidate.email === "string" &&
