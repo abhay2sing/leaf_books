@@ -58,7 +58,7 @@ const booksUrl = import.meta.env.BOOKS_API_URL
       }
 
       setEmail(email);
-      navigate("${import.meta.env.VITE_API_URL}/mybooks");
+      navigate(`${import.meta.env.VITE_API_URL}/mybooks`);
     } catch (loginError) {
       setError(
         loginError instanceof Error
