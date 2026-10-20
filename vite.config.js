@@ -14,6 +14,6 @@ export default defineConfig({
    host: "0.0.0.0",
     port: Number(process.env.PORT) || 4173,
     strictPort: true,
-    allowedHosts: ["booksleafs-2.onrender.com", "booleaf-8.onrender.com","booksleafs-4.onrender.com", "leaf-books.onrender.com" ],
+    allowedHosts: ["booksleafs-2.onrender.com", "booleaf-8.onrender.com","booksleafs-4.onrender.com", "leaf-books.onrender.com","leaf-books-1.onrender.com" ],
   },
 });
