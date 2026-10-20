@@ -41,6 +41,7 @@ export default function LoginPanel() {
       if (!Array.isArray(authors)) {
         throw new Error("The author API returned an invalid author list.");
       }
+      console.log("authors:");
 
       const author = authors.find(
         (candidate) =>
