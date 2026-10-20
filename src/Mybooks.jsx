@@ -53,7 +53,7 @@ const booksUrl = import.meta.env.VITE_BOOKS_API_URL;
 
       try {
         const response = await fetch(
-          `${booksUrl}/authors?email=${encodeURIComponent(email)}`,
+          `${import.meta.env.VITE_BOOKS_API_URL}/authors?email=${encodeURIComponent(email)}`,
           { signal: controller.signal },
         );
         if (!response.ok) {
@@ -105,7 +105,7 @@ const booksUrl = import.meta.env.VITE_BOOKS_API_URL;
 
   function signOut() {
     setEmail("");
-    navigate('${import.meta.env.VITE_API_URL}/login', { replace: true });
+    navigate(`${import.meta.env.VITE_API_URL}/login`, { replace: true });
   }
 
   const books = author?.books ?? [];

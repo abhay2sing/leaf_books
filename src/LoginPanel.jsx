@@ -27,7 +27,7 @@ const booksUrl = import.meta.env.BOOKS_API_URL
 
     try {
       const response = await fetch(
-        `${booksUrl}/authors?email=${encodeURIComponent(email)}`,
+        `${import.meta.env.VITE_BOOKS_API_URL}/authors?email=${encodeURIComponent(email)}`,
       );
       if (!response.ok) {
         throw new Error(`Unable to reach the author API (${response.status}).`);
