@@ -43,7 +43,7 @@ export default function Mybooks() {
       setAuthor(null);
       return undefined;
     }
-    const booksUrl = import.meta.env.BOOKS_API_URL
+    const booksUrl = import.meta.env.VITE_BOOKS_API_URL;
 
     const controller = new AbortController();
 
