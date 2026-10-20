@@ -33,7 +33,7 @@ function formatCount(count) {
 export default function Mybooks() {
   const { email, setEmail } = useEmail();
   const navigate = useNavigate();
-  const [author, setAuthor] = useState(null);
+  const [author, setAuthor] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 //const booksUrl = import.meta.env.VITE_BOOKS_API_URL;
