@@ -43,6 +43,7 @@ export default function Mybooks() {
       setAuthor(null);
       return undefined;
     }
+    const booksUrl = import.meta.env.BOOKS_API_URL
 
     const controller = new AbortController();
 
@@ -52,7 +53,7 @@ export default function Mybooks() {
 
       try {
         const response = await fetch(
-          `http://localhost:3000/authors?email=${encodeURIComponent(email)}`,
+          `${booksUrl}/authors?email=${encodeURIComponent(email)}`,
           { signal: controller.signal },
         );
         if (!response.ok) {
