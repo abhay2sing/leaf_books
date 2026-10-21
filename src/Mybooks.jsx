@@ -53,7 +53,7 @@ export default function Mybooks() {
 
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_BOOKS_API_URL}/authors?email=${encodeURIComponent(email)}`,
+          `${import.meta.env.VITE_BOOKS_API_URL}/authors`,
           { signal: controller.signal },
         );
         if (!response.ok) {
