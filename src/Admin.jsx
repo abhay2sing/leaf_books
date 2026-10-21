@@ -73,7 +73,7 @@ export default function Admin() {
     setError("");
 
     try {
-      const response = await fetch("/api/support-requests", {
+      const response = await fetch('${VITE_API_URL}/api/support-requests', {
         headers: {
           Authorization: `Basic ${btoa(`${email}:${password}`)}`,
         },
