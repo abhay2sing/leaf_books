@@ -105,7 +105,7 @@ export default function Mybooks() {
 
   function signOut() {
     setEmail("");
-    navigate(`${import.meta.env.VITE_API_URL}/login`, { replace: true });
+    navigate('/login', { replace: true });
   }
 
   const books = author?.books ?? [];
